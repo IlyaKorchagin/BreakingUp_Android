@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FMyFrezzesResults">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            // Baby Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageBabyButton"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/babyfrezze" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/babytitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Baby"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/babyRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/babyRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Baby Frezze
+
+            // Shoulder Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageShoulder"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/shoulderclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Shouldertitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Shoulder"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/ShoulderRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ShoulderRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Shoulder Frezze
+
+            // Turtel Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageTurtel"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/turtelclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/turteltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Turtle"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/turtelRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/turtelRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Turtel Frezze
+
+            // Head Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHead"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/headfrezzeclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/headtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Head"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/headRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/headRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Head Frezze
+
+            // Chair Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageChair"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/chairclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chairtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Chair"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/chairRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/chairRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Chair Frezze
+
+
+
+            // Elbow Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageElbow"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/elbowclick" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/elbowtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Elbow"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+
+                    <ProgressBar
+                        android:id="@+id/elbowRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <TextView
+                        android:id="@+id/elbowRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Elbow Frezze
+
+            // Head_Hollowback Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHeadHollowbac"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/headhollowbackclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Head_Hollowbacktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Head Hollowback"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/Head_HollowbackRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/Head_HollowbackRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Head_Hollowback Frezze
+
+
+            //  OneHand Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageOnehand"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/onehandclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/OneHandtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="One hand"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/OneHandRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/OneHandRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // OneHand Frezze
+
+            //  Invert Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageInvert"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/invertclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Inverttitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Invert"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/InvertRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/InvertRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Invert Frezze
+
+            // Hollowback Frezze
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHollowback"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/hollowbackclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Hollowbacktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Hollowback"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/HollowbackRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HollowbackRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Hollowback Frezze
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyStretchResults">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            // Twine
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageTwine"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/twineclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Twinetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Шпагат"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/TwineRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/TwineRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Twine
+
+            // Fold
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageFold"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/foldclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Foldtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Складка"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/FoldRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/FoldRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Fold
+
+            // Buterfly
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButterfly"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/butterflyclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Buterflytitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Бабочка"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/ButerflyRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ButerflyRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Buterfly
+
+            // Shoulders
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageShoulders"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/shouldersclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Shoulderstitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Плечи"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/ShouldersRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ShouldersRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Shoulders
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

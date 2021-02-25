@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPowerMoveResults">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            // backspin
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageBackspin"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/backspinclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/backspintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Backspin"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/backspinRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/backspinRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // backspin
+
+            // Swipe
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageSwipes"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/swipesclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Swipetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Swipes"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/SwipeRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/SwipeRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Swipe
+
+            // Turtle Move
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageTurtelMove"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/turtelclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/turtelMovetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Turtle"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/turtelMoveRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/turtelMoveRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Turtel Move
+
+            // Windmill
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageWindmill"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/windmillclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/windmilltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Windmill"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/windmillRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/windmillRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // windmill
+
+
+            // Headspin
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageHeadspin"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/headfrezzeclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Headspintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Headspin"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/HeadspinRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HeadspinRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Headspin
+
+
+
+            // Cricket
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageCricket"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/cricketclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Crickettitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Cricket"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/CricketRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/CricketRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Cricket
+
+            // Web
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageWeb"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/webclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Webtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Web"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/WebRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/WebRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Web
+
+
+            // Wolf
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageWolf"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/wolfclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Wolftitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Wolf"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/WolfRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/WolfRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Wolf
+
+            // Muchmill
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageMunchmill"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/munchmillclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Muchmilltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Munchmill"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/MuchmillRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/MuchmillRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Munchmill
+
+            // Flare
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageFlare"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/flareclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Flaretitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Flare"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/FlareRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/FlareRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Flare
+
+            // Ninety-nine
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageNinety"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/ninetyclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Ninetyninetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Ninety-nine"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/NinetynineRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/NinetynineRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Ninety-nine
+
+
+            // Halo
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHalo"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/haloclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Halotitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Halo"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/HaloRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HaloRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Halo
+
+
+
+            // Jackhammer
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageJackhammer"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/jackhammerclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Jackhammertitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Jackhammer"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/JackhammerRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/JackhammerRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Jackhammer
+
+            // Ufo
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageUfo"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/ufoclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Ufotitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Ufo"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/UfoRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/UfoRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Ufo
+
+            // ElbowAirflare
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageElbowAirflare"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/elbowairflareclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ElbowAirflaretitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="ElbowAirflare"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/ElbowAirflareRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ElbowAirflareRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // ElbowAirflare
+
+            // Airflare
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageAirflare"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/airflareclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Airflaretitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Airflare"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/AirflareRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/AirflareRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout> // Airflare
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ShowBDImBtn"
+        android:title="@string/showBD"
+        android:icon="@drawable/show1"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/EditorBDBtn"
+        android:title="@string/create_new_pupil"
+        android:background="@drawable/ring"
+        android:icon="@drawable/change1"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+
+</menu>

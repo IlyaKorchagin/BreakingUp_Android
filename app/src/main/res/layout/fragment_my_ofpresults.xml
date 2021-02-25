@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyOFPResults">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            // PushUps
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imagePushups"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/pushupsclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/PushUpstitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Отжимания"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/PushUpsRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/PushUpsRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // PushUps
+
+            // HandStand
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHandstand"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/handstandclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/HandStandtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Стойка на руках"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/HandStandRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HandStandRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // HandStand
+
+            // Horizont
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageHorizont"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/horizontclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Horizonttitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Горизонт"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/HorizontRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HorizontRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Horizont
+
+            // Angel
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageAngle"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/angleclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/angeltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Уголок"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/angelRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/angelRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> // Angel
+
+            // Bridge
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageBridge"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/bridgeclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Bridgetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Мостик"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/BridgeRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/BridgeRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> //Bridge
+
+            // Fingers
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageFingers"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/fingersclick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Fingerstitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Стойка на пальцах"
+                        android:textSize="16dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/FingersRatingBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/FingersRatingtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:textSize="14dp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout> //Fingers
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
