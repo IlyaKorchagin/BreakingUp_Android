@@ -57,16 +57,16 @@ public class FMainRezults extends Fragment {
                 TextView ratingtext = (TextView) getActivity().findViewById(R.id.ratingtext);
                 switch (position) {
                     case 0:
-                        ratingtext.setText(String.valueOf("FREZZE RATING - " + curPupil.frezze_rating) + "%");
+                        ratingtext.setText(String.valueOf("FREZZE RATING - " + curPupil.getFrezze_rating()) + "%");
                         break;
                     case 1:
-                        ratingtext.setText(String.valueOf("POWER RATING - " + curPupil.powermove_rating) + "%");
+                        ratingtext.setText(String.valueOf("POWER RATING - " + curPupil.getPowermove_rating()) + "%");
                         break;
                     case 2:
-                        ratingtext.setText(String.valueOf("ОФП RATING - " + curPupil.ofp_rating) + "%");
+                        ratingtext.setText(String.valueOf("ОФП RATING - " + curPupil.getOfp_rating()) + "%");
                         break;
                     case 3:
-                        ratingtext.setText(String.valueOf("STRETCH RATING - " + curPupil.streching_rating) + "%");
+                        ratingtext.setText(String.valueOf("STRETCH RATING - " + curPupil.getStreching_rating()) + "%");
                         break;
                     default:
                         ratingtext.setText("");

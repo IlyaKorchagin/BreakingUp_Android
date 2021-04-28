@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.content.Intent;
 import android.text.Html;
@@ -36,7 +38,7 @@ public class StatisticActivity extends AppCompatActivity {
     private DatabaseReference mDataBase;
     private static Pupils curPupil;
     private ProgressBar ratingBar;
-    private TextView name, pupil_name, ratingtext;
+    private TextView name, pupil_name, ratingtext, tvStatus, tvStatusTitle;
     private ImageView photo;
     private Toolbar toolbar;
 
@@ -64,6 +66,8 @@ public class StatisticActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         name = findViewById(R.id.message);        // связываем переменную с компонентом
         pupil_name = findViewById(R.id.pupil_name);
+        tvStatus = findViewById(R.id.pupil_status);
+        tvStatusTitle = findViewById(R.id.status);
         ratingtext = findViewById(R.id.ratingtext);
         ratingBar = findViewById(R.id.ratingBar);
         photo = findViewById(R.id.avatar);
@@ -85,7 +89,7 @@ public class StatisticActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.MyRoomMenuBtn:
                 TextView ratingtext = (TextView)findViewById(R.id.ratingtext);
-                ratingtext.setText(String.valueOf(" FREZZE RATING - " + curPupil.frezze_rating) + "%");
+                ratingtext.setText(String.valueOf(" FREZZE RATING - " + curPupil.getFrezze_rating()) + "%");
                 fTrans.replace(R.id.userFragment,fragMainRez);
                 LinearLayout head = (LinearLayout) findViewById(R.id.headlayout);
                 this.setTitle(Html.fromHtml("<small>Личный кабинет</small>"));
@@ -93,6 +97,9 @@ public class StatisticActivity extends AppCompatActivity {
                 break;
 
             case R.id.RatingMenuBtn:
+                Bundle fmyrezbundle = new Bundle();
+                fmyrezbundle.putSerializable("curPupil", curPupil);
+                fragRatingTable.setArguments(fmyrezbundle);
                 fTrans.replace(R.id.userFragment, fragRatingTable);
                 head = (LinearLayout) findViewById(R.id.headlayout);
                 this.setTitle(Html.fromHtml("<small>Рейтинговая таблица</small>"));
@@ -140,13 +147,14 @@ public class StatisticActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
-
                 }
+
             });
         }
 
     }
 
+    @SuppressLint("ResourceAsColor")
     private void FillScreen(Pupils curPupil)
     {
         Bundle fmyrezbundle = new Bundle();
@@ -157,44 +165,82 @@ public class StatisticActivity extends AppCompatActivity {
         fTrans.replace(R.id.userFragment, fragMainRez);
         fTrans.commit();
 
-        ratingBar.setProgress((int) curPupil.rating);
+        ratingBar.setProgress((int) curPupil.getRating());
         name.setTextSize(14);
         pupil_name.setTextSize(16);
-        pupil_name.setText(curPupil.name);
+        pupil_name.setText(curPupil.getName());
+        tvStatusTitle.setTextSize(12);
+        tvStatusTitle.setText("Номинация: ");
+        tvStatus.setTextSize(12);
+        tvStatus.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC));
+        switch (curPupil.getStatus()) {
+            case 0:
+                tvStatus.setText("не указана");
+            break;
+
+            case 1:
+                tvStatus.setTextColor(getResources().getColor(R.color.baby));
+                tvStatus.setText("Дети до 7 лет");
+            break;
+
+            case 2:
+                tvStatus.setTextColor(getResources().getColor(R.color.logo_green));
+                tvStatus.setText("Начинающие");
+            break;
+
+            case 3:
+                tvStatus.setTextColor(getResources().getColor(R.color.logo_sea));
+                tvStatus.setText("Второгодки");
+            break;
+
+            case 4:
+                tvStatus.setTextColor(getResources().getColor(R.color.logo_orange));
+                tvStatus.setText("Продолжающие");
+            break;
+
+            case 5:
+                tvStatus.setTextColor(getResources().getColor(R.color.logo_red));
+                tvStatus.setText("Kids Pro");
+            break;
+
+            default: tvStatus.setText("Номинация: не указана");
+            break;
+        }
+
 
         if (ratingBar.getProgress() <= 10) {
             photo.setImageResource(R.drawable.level1);
-            name.setText(String.valueOf("LEVEL 1. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 1. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 20) {
             photo.setImageResource(R.drawable.level2);
-            name.setText(String.valueOf("LEVEL 2. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 2. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 30) {
             photo.setImageResource(R.drawable.level3);
-            name.setText(String.valueOf("LEVEL 3. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 3. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 40) {
             photo.setImageResource(R.drawable.level4);
-            name.setText(String.valueOf("LEVEL 4. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 4. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 50) {
             photo.setImageResource(R.drawable.level5);
-            name.setText(String.valueOf("LEVEL 5. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 5. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 60) {
             photo.setImageResource(R.drawable.level6);
-            name.setText(String.valueOf("LEVEL 6. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 6. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 70) {
             photo.setImageResource(R.drawable.level7);
-            name.setText(String.valueOf("LEVEL 7. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 7. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 80) {
             photo.setImageResource(R.drawable.level8);
-            name.setText(String.valueOf("LEVEL 8. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 8. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 90) {
             photo.setImageResource(R.drawable.level9);
-            name.setText(String.valueOf("LEVEL 9. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 9. Rating - " + curPupil.getRating()) + "%");
         } else if (ratingBar.getProgress() <= 100) {
             photo.setImageResource(R.drawable.level10);
-            name.setText(String.valueOf("LEVEL 10. Rating - " + curPupil.rating) + "%");
+            name.setText(String.valueOf("LEVEL 10. Rating - " + curPupil.getRating()) + "%");
         }
 
-        ratingtext.setText(String.valueOf(" FREZZE RATING - " + curPupil.frezze_rating) + "%");
+        ratingtext.setText(String.valueOf(" FREZZE RATING - " + curPupil.getFrezze_rating()) + "%");
     }
 
 

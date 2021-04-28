@@ -3,6 +3,7 @@ package com.example.goodfootbreaking;
 
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -73,7 +74,8 @@ public class FEvents extends Fragment {
         events = new ArrayList<>();
         adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, events);
 
-        getDataFromDB();
+        MyTask myTask = new MyTask();
+        myTask.execute();
 
         return view;
     }
@@ -167,6 +169,17 @@ public class FEvents extends Fragment {
             tableLayout.addView(tableRow, i);
         }
 
+    }
+
+    class MyTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            getDataFromDB();
+
+            return null;
+        }
     }
 
 }

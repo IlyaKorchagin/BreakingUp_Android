@@ -212,7 +212,7 @@ public class MyPowerMoveResults extends Fragment implements View.OnClickListener
         myBackspinRating.setProgress(pupil.backspin);
         myBackspinRatingText.setText(String.valueOf(pupil.backspin)+ "%");
 
-        if(pupil.turtel >=65){
+        if(pupil.turtle >=65){
             myCricketRating.setProgress(pupil.cricket);
             myCricketRatingText.setText(String.valueOf(pupil.cricket)+ "%");
         }
@@ -303,9 +303,9 @@ public class MyPowerMoveResults extends Fragment implements View.OnClickListener
         mySwipesRating.setProgress(pupil.swipes);
         mySwipesRatingText.setText(String.valueOf(pupil.swipes)+ "%");
 
-        if(pupil.turtelfrezze>=40){
-            myTurtelMoveRating.setProgress(pupil.turtel);
-            myTurtelMoveRatingText.setText(String.valueOf(pupil.turtel)+ "%");
+        if(pupil.turtlefrezze>=40){
+            myTurtelMoveRating.setProgress(pupil.turtle);
+            myTurtelMoveRatingText.setText(String.valueOf(pupil.turtle)+ "%");
         }
         else {
             myTurtelMoveImage.setImageResource(R.drawable.locked);
@@ -336,7 +336,7 @@ public class MyPowerMoveResults extends Fragment implements View.OnClickListener
             myWebRatingText.setText("Требуется Windmill > 80");
         }
 
-        if((pupil.babyfrezze >=50)&(pupil.turtelfrezze >=40)){
+        if((pupil.babyfrezze >=50)&(pupil.turtlefrezze >=40)){
             myWindmillRating.setProgress(pupil.windmill);
             myWindmillRatingText.setText(String.valueOf(pupil.windmill)+ "%");
         }
@@ -377,15 +377,15 @@ public class MyPowerMoveResults extends Fragment implements View.OnClickListener
                  startActivity(intent);                                                     // создаем интент для связи активностью
                 break;
             case R.id.imageTurtelMove:
-                if(pupil.turtelfrezze>=40) {
+                if(pupil.turtlefrezze>=40) {
                     intent = new Intent(v.getContext(), DescriptionActivity.class);     // создаем интент для связи активностью для редактирования БД
                     intent.putExtra(DescriptionActivity.DESCRIPTION_MESSAGE, "TurtelMove");             // передаем параметр "название элемента"
-                    intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.turtel);
+                    intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.turtle);
                     startActivity(intent);                                                     // создаем интент для связи активностью
                 }
                 break;
             case R.id.imageWindmill:
-                if((pupil.babyfrezze>=50)&(pupil.turtelfrezze >=40)) {
+                if((pupil.babyfrezze>=50)&(pupil.turtlefrezze >=40)) {
                     intent = new Intent(v.getContext(), DescriptionActivity.class);     // создаем интент для связи активностью для редактирования БД
                     intent.putExtra(DescriptionActivity.DESCRIPTION_MESSAGE, "Windmill");             // передаем параметр "название элемента"
                     intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.windmill);
@@ -400,7 +400,7 @@ public class MyPowerMoveResults extends Fragment implements View.OnClickListener
                     startActivity(intent);                                                          // создаем интент для связи активностью
                 }break;
             case R.id.imageCricket:
-                if(pupil.turtel>=65) {
+                if(pupil.turtle>=65) {
                     intent = new Intent(v.getContext(), DescriptionActivity.class);     // создаем интент для связи активностью для редактирования БД
                     intent.putExtra(DescriptionActivity.DESCRIPTION_MESSAGE, "Cricket");             // передаем параметр "название элемента"
                     intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.cricket);

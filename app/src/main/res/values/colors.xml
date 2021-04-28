@@ -14,10 +14,12 @@
     <color name="seven">#fce300</color>
     <color name="eight">#fcfa08</color>
     <color name="background">#e6e6e6</color>
-    <color name="logo_red">#f26450</color>
-    <color name="logo_sea">#27baa8</color>
-    <color name="logo_green">#64bf72</color>
+    <color name="logo_red">#f26450</color>          // kids Pro
+    <color name="logo_sea">#27baa8</color>          // второгодки
+    <color name="logo_green">#64bf72</color>        // начинающие
     <color name="logo_yellow">#fcde06</color>
+    <color name="logo_orange">#f58f1b</color>       // продолжающие
+    <color name="baby">#f51bf5</color>              // дети до 7 лет
 
     <color name="local">#64bf72</color>
     <color name="city">#19c2b5</color>

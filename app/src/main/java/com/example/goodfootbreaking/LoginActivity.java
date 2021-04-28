@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edLogin, edPassword, edName;
     private FirebaseAuth mAuth;
     private Button bStart, bSignUp, bSignIn, bSignOut;
-    private TextView tvUserEmail;
+    private TextView tvUserEmail, tvForgetPassword;
     private String PUPILS_KEY ="Pupils";    //  идентификатор таблицы в БД
     private DatabaseReference mDataBase;    //  ссылка на БД
     private Boolean registration;           //  признак регистрации, в случае регистрации при первом входе в БД будет добавлен новый пользователь
@@ -38,6 +38,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
         init();
+        tvForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
     @Override
 
@@ -66,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.edPassword);
         edName = findViewById(R.id.edName);
         tvUserEmail = findViewById(R.id.tvUserEmail);
+        tvForgetPassword = findViewById(R.id.textForgetPassword);
         bStart = findViewById(R.id.bStart);
         bSignOut = findViewById(R.id.bSignOut);
         bSignUp = findViewById(R.id.bSignUp);
@@ -82,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onClickSignUp(View view)
     {
         if(isConnected()) {
-            if (!TextUtils.isEmpty(edLogin.getText().toString()) && !TextUtils.isEmpty(edPassword.getText().toString()) && !registration ) {
+            if (!TextUtils.isEmpty(edName.getText().toString()) && !TextUtils.isEmpty(edLogin.getText().toString()) && !TextUtils.isEmpty(edPassword.getText().toString()) && !registration ) {
                 mAuth.createUserWithEmailAndPassword(edLogin.getText().toString().trim().toLowerCase(), edPassword.getText().toString().trim()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -101,7 +110,14 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
             }
-            else Toast.makeText(getApplicationContext(), "Введите необходимые поля", Toast.LENGTH_SHORT).show();
+            else {
+                if (TextUtils.isEmpty(edLogin.getText().toString())) Toast.makeText(getApplicationContext(), "Введите Email", Toast.LENGTH_SHORT).show();
+                else
+                    if (TextUtils.isEmpty(edPassword.getText().toString())) Toast.makeText(getApplicationContext(), "Введите Пароль", Toast.LENGTH_SHORT).show();
+                    else
+                        if (TextUtils.isEmpty(edName.getText().toString())) Toast.makeText(getApplicationContext(), "Введите Фамилию и Имя", Toast.LENGTH_SHORT).show();
+
+            }
         }
         else Toast.makeText(this,"Отсутствует подключение к интеренету",Toast.LENGTH_SHORT).show();
     }
@@ -130,12 +146,16 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 notSigned();
                                 Toast.makeText(getApplicationContext(), "Ошибка входа", Toast.LENGTH_SHORT).show();
-                                Toast.makeText(getApplicationContext(), "Проверьте Вашу почту и подтвердить свой Email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Если Вы регистровались ранее, то проверьте свой Email для подтверждения регистрации", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 }
-                else Toast.makeText(getApplicationContext(), "Введите необходимые поля", Toast.LENGTH_SHORT).show();
+                else {
+                    if (TextUtils.isEmpty(edPassword.getText().toString())) Toast.makeText(getApplicationContext(), "Введите Пароль", Toast.LENGTH_SHORT).show();
+                    else
+                        if (TextUtils.isEmpty(edLogin.getText().toString())) Toast.makeText(getApplicationContext(), "Введите Email", Toast.LENGTH_SHORT).show();
+                }
         }
         else Toast.makeText(this,"Отсутствует подключение к интеренету",Toast.LENGTH_SHORT).show();
     }
@@ -161,6 +181,7 @@ public class LoginActivity extends AppCompatActivity {
 
             edPassword.setVisibility(View.GONE);
             edLogin.setVisibility(View.GONE);
+            tvForgetPassword.setVisibility(View.GONE);
             edName.setVisibility(View.GONE);
             bSignIn.setVisibility(View.GONE);
             bSignUp.setVisibility(View.GONE);
@@ -174,8 +195,10 @@ public class LoginActivity extends AppCompatActivity {
         bSignOut.setVisibility(View.GONE);
         tvUserEmail.setVisibility(View.GONE);
 
+
         edPassword.setVisibility(View.VISIBLE);
         edLogin.setVisibility(View.VISIBLE);
+        tvForgetPassword.setVisibility(View.VISIBLE);
         edName.setVisibility(View.VISIBLE);
         bSignIn.setVisibility(View.VISIBLE);
         bSignUp.setVisibility(View.VISIBLE);
@@ -192,9 +215,9 @@ public class LoginActivity extends AppCompatActivity {
             {
                 // Добавляем нового пользователя в случае регистрации и если не root
                 Pupils newPupil = new Pupils();
-                newPupil.name = edName.getText().toString().trim();
-                newPupil.email = edLogin.getText().toString().trim().toLowerCase();
-                newPupil.id = mDataBase.getKey();
+                newPupil.setName(edName.getText().toString().trim());
+                newPupil.setEmail(edLogin.getText().toString().trim().toLowerCase()) ;
+                newPupil.setId(mDataBase.getKey());
 
                 mDataBase.push().setValue(newPupil);
                 registration = false;
@@ -239,5 +262,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         return connected;
     }
+
 
 }

@@ -187,8 +187,8 @@ public class FMyFrezzesResults extends Fragment implements View.OnClickListener{
         myBabyRating.setProgress(pupil.babyfrezze);
         myBabyRatingText.setText(String.valueOf(pupil.babyfrezze)+ "%");
 
-        myTurtelRating.setProgress(pupil.turtelfrezze);
-        myTurtelRatingText.setText(String.valueOf(pupil.turtelfrezze)+ "%");
+        myTurtelRating.setProgress(pupil.turtlefrezze);
+        myTurtelRatingText.setText(String.valueOf(pupil.turtlefrezze)+ "%");
 
         myHeadRating.setProgress(pupil.headfrezze);
         myHeadRatingText.setText(String.valueOf(pupil.headfrezze)+ "%");
@@ -280,7 +280,7 @@ public class FMyFrezzesResults extends Fragment implements View.OnClickListener{
             case R.id.imageTurtel:
                 intent = new Intent(getActivity(), DescriptionActivity.class);     // создаем интент для связи активностью для редактирования БД
                 intent.putExtra(DescriptionActivity.DESCRIPTION_MESSAGE, "Turtel Frezze");             // передаем параметр "название элемента"
-                intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.turtelfrezze);
+                intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.turtlefrezze);
                 startActivity(intent);                                                     // создаем интент для связи активностью
                 break;
             case R.id.imageShoulder:
@@ -296,7 +296,7 @@ public class FMyFrezzesResults extends Fragment implements View.OnClickListener{
                 startActivity(intent);                                                     // создаем интент для связи активностью
                 break;
             case R.id.imageChair:
-                if((pupil.babyfrezze >=20)&(pupil.turtelfrezze>=20)){
+                if((pupil.babyfrezze >=20)&(pupil.turtlefrezze>=20)){
                     intent = new Intent(getActivity(), DescriptionActivity.class);     // создаем интент для связи активностью для редактирования БД
                     intent.putExtra(DescriptionActivity.DESCRIPTION_MESSAGE, "Chair Frezze");             // передаем параметр "название элемента"
                     intent.putExtra(DescriptionActivity.DESCRIPTION_RATING, pupil.chairfrezze);

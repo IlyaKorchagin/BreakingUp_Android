@@ -18,16 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode">
-
+        <activity android:name=".ForgetPasswordActivity"></activity>
         <activity
             android:name=".StatisticActivity"
             android:label="@string/myroom"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".DescriptionActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -40,4 +38,3 @@
     </application>
 
 </manifest>
-

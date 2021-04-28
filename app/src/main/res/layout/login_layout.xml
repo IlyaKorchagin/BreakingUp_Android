@@ -59,7 +59,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="12sp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAuto" />
@@ -79,10 +79,12 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="12sp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edLogin" />
+
+
 
     <Button
         android:id="@+id/bSignUp"
@@ -94,7 +96,7 @@
         android:padding="5sp"
         android:text="Зарегистрироваться"
         android:textSize="16sp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/edName"
         app:layout_constraintStart_toStartOf="@+id/edName"
         app:layout_constraintTop_toBottomOf="@+id/edName" />
@@ -109,7 +111,7 @@
         android:padding="5sp"
         android:text="Войти"
         android:textSize="16sp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/bSignUp"
         app:layout_constraintStart_toStartOf="@+id/bSignUp"
         app:layout_constraintTop_toBottomOf="@+id/bSignUp" />
@@ -119,8 +121,8 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:textAlignment="center"
         android:text=""
+        android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
         android:typeface="monospace"
@@ -134,8 +136,8 @@
         android:id="@+id/bStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
         android:layout_marginLeft="70dp"
+        android:layout_marginTop="1dp"
         android:layout_marginRight="70dp"
         android:background="@drawable/roundrect"
         android:onClick="onClickStart"
@@ -145,33 +147,51 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/tvUserEmail"
         app:layout_constraintStart_toStartOf="@+id/tvUserEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUserEmail"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/bSignOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="70dp"
-        android:onClick="onClickSignOut"
-        android:text="Выйти"
-        android:visibility="visible"
         android:background="@drawable/roundrect"
+        android:onClick="onClickSignOut"
         android:padding="5sp"
+        android:text="Выйти"
         android:textSize="16sp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/bStart"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bStart"
-        app:layout_constraintTop_toBottomOf="@+id/bStart" />
+        app:layout_constraintTop_toBottomOf="@+id/bStart"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="monospace"
+        android:text="@string/ForgetPass"
+        android:textAlignment="textEnd"
+        android:textColor="@color/one"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/edPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
 
     <EditText
         android:id="@+id/edName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="60dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/corner"
         android:ems="10"
         android:hint="Фамилия и Имя"
@@ -180,9 +200,9 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="12sp"
-        android:visibility="gone"
+        android:visibility="visible"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textForgetPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
